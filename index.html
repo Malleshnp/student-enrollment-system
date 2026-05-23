@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Enrollment Form</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <style>
+        #studentModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 10500;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        #studentModal.show {
+            display: flex;
+        }
+        .modal-card {
+            width: min(100%, 700px);
+            max-height: 90vh;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            background: #fff;
+        }
+        .modal-body {
+            max-height: 65vh;
+            overflow-y: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <div class="card p-4 shadow">
+
+        <h2 class="text-center mb-4">
+            Student Enrollment Form
+        </h2>
+
+        <!-- Roll No -->
+
+        <div class="mb-3">
+
+            <label>Roll No</label>
+
+            <input
+            type="text"
+            id="rollNo"
+            class="form-control">
+
+        </div>
+
+        <!-- Full Name -->
+
+        <div class="mb-3">
+
+            <label>Full Name</label>
+
+            <input
+            type="text"
+            id="fullName"
+            class="form-control">
+
+        </div>
+
+        <!-- Class -->
+
+        <div class="mb-3">
+
+            <label>Class</label>
+
+            <input
+            type="text"
+            id="studentClass"
+            class="form-control">
+
+        </div>
+
+        <!-- Birth Date -->
+
+        <div class="mb-3">
+
+            <label>Birth Date</label>
+
+            <input
+            type="date"
+            id="birthDate"
+            class="form-control">
+
+        </div>
+
+        <!-- Address -->
+
+        <div class="mb-3">
+
+            <label>Address</label>
+
+            <textarea
+            id="address"
+            class="form-control"></textarea>
+
+        </div>
+
+        <!-- Enrollment Date -->
+
+        <div class="mb-3">
+
+            <label>Enrollment Date</label>
+
+            <input
+            type="date"
+            id="enrollmentDate"
+            class="form-control">
+
+        </div>
+
+        <!-- Vacate Date -->
+
+        <div
+        class="mb-3"
+        id="vacateDiv"
+        style="display:none;">
+
+            <label>Vacate Date</label>
+
+            <input
+            type="date"
+            id="vacateDate"
+            class="form-control">
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="text-center">
+
+            <button
+            id="saveBtn"
+            class="btn btn-success"
+            disabled>
+                Save
+            </button>
+
+            <button
+            id="updateBtn"
+            class="btn btn-warning"
+            disabled>
+                Update
+            </button>
+
+            <button
+            id="deleteBtn"
+            class="btn btn-danger"
+            disabled>
+                Delete
+            </button>
+
+            <button
+            id="resetBtn"
+            class="btn btn-secondary">
+                Reset
+            </button>
+
+            <button
+            id="viewBtn"
+            class="btn btn-primary">
+                View Students
+            </button>
+
+        </div>
+
+        <hr>
+
+        <div id="studentList"></div>
+
+        <div id="studentModal" class="modal-overlay">
+            <div class="modal-card shadow">
+                <div class="modal-header d-flex justify-content-between align-items-center p-3 border-bottom">
+                    <h5 class="m-0">Student List</h5>
+                    <button type="button" id="studentModalClose" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3" id="studentModalBody">
+                    <p>Loading students...</p>
+                </div>
+                <div class="modal-footer p-3 border-top text-end">
+                    <button type="button" class="btn btn-secondary" id="studentModalCloseFooter">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
