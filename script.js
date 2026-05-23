@@ -2,7 +2,7 @@
 // JPDB DETAILS
 // ------------------------------------
 
-const connToken = "90935194|-31949243324302891|90958740";
+const connToken = "YOUR_REAL_TOKEN";
 
 const dbName = "SCHOOL-DB";
 
